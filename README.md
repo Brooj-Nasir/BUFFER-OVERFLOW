@@ -11,7 +11,7 @@ Now an attacker overflows the buffer by entering 4 characters:
 # 2. Languages vulnerable to this Attack:
 - In **Python** and **Java** it is impossible to have buffer overflow because they use Run Time Bounds Checking( How Many Spaces Left.).
 - There is performance cost for te extra code we are running everytime we want to insert an element into the array .Thus **C** and **C++** hae chosen not to use runtime bounds checking by default.
-# Damage it can cause:
+# 3. Damage it can cause:
 The extra data that the attacker over writes is called **return address**. Following can be the results of buffer overflow:
 - Normally buffer overflow results in a ***Program Crash***. Because return address does not points to a valid program instruction.
   > Just like package addressed to a place that does not exists.
@@ -20,7 +20,7 @@ The extra data that the attacker over writes is called **return address**. Follo
   2. Dumping a Password
   3. Starting a shell
   4. Eexecuting a malicious code etc.
-# How it Arises:
+# 4. How it Arises:
 **1. Input with Excessive Data:** An attacker provides input that exceeds the allocated space in a program's buffer. This input can come from user inputs, network data, or other external sources.
 >
 **2. Lack Of Input Validation:** The program fails to check the size of the input data against the size of the buffer. As a result, when the input is copied into the buffer, it overflows beyond the allocated memory.
@@ -30,5 +30,5 @@ The extra data that the attacker over writes is called **return address**. Follo
 **4. Exploiting Control Flow:** By carefully crafting the overflowed input, an attacker can manipulate the program's control flow. This might involve overwriting a return address to redirect program execution to a malicious code snippet injected into the input.
 >
 **5. Executing Malicious Code:** With control flow manipulated, the attacker's injected code gets executed by the compromised program, potentially leading to unauthorized access, privilege escalation, or other malicious actions.
-# Goals:
+# 5. Goals:
 The attacker uses the control gained through the buffer overflow to achieve their specific objectives, which may include stealing sensitive data, compromising the system's integrity, or disrupting normal operation.
